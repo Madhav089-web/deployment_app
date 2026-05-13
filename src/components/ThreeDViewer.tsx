@@ -5,7 +5,7 @@ import { OrbitControls, Environment, ContactShadows, Float, useGLTF } from "@rea
 import { useDesignStore } from "@/store/useDesignStore";
 import { useRef, useEffect } from "react";
 import * as THREE from "three";
-import { motion } from "framer-motion-3d";
+
 
 // Parametric clothing component
 function ParametricClothing({ design }: { design: any }) {
