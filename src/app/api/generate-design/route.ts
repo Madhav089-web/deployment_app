@@ -42,7 +42,7 @@ The JSON must have the following structure:
           content: prompt,
         },
       ],
-      model: "llama3-8b-8192", // Fast and reliable model
+      model: "llama-3.1-8b-instant", // Fast and reliable model
       response_format: { type: "json_object" },
     });
 
