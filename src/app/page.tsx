@@ -37,14 +37,14 @@ export default function LandingPage() {
         >
           <div className="inline-flex items-center space-x-2 glass-panel px-4 py-2 rounded-full mb-4">
             <span className="flex h-2 w-2 rounded-full bg-accent animate-pulse"></span>
-            <span className="text-sm font-medium">Groq AI Powered</span>
+
           </div>
-          
+
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight leading-tight">
             Design. Visualize. <br />
             <span className="text-gradient">Wear.</span>
           </h1>
-          
+
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
             Experience the future of fashion. Type a prompt, generate stunning 3D clothing designs in real-time, and bring your imagination to life.
           </p>
@@ -61,19 +61,19 @@ export default function LandingPage() {
 
         {/* Features grid */}
         <div id="features" className="w-full grid grid-cols-1 md:grid-cols-3 gap-6 mt-32">
-          <FeatureCard 
+          <FeatureCard
             icon={<Zap className="w-6 h-6 text-accent" />}
             title="Real-time Generation"
             description="Type a description and watch AI craft structured 3D designs instantly using Groq's lightning-fast models."
             delay={0.2}
           />
-          <FeatureCard 
+          <FeatureCard
             icon={<Box className="w-6 h-6 text-primary" />}
             title="Interactive 3D Viewer"
             description="Rotate, zoom, and inspect your custom clothing on dynamic parametric models rendered in React Three Fiber."
             delay={0.4}
           />
-          <FeatureCard 
+          <FeatureCard
             icon={<Layers className="w-6 h-6 text-pink-500" />}
             title="Iterative Editing"
             description="Don't like the sleeves? Just tell the AI to make them shorter. Edit naturally with conversational prompts."
@@ -87,7 +87,7 @@ export default function LandingPage() {
 
 function FeatureCard({ icon, title, description, delay }: { icon: React.ReactNode, title: string, description: string, delay: number }) {
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
