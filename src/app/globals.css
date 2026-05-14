@@ -1,21 +1,40 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #09090b;
-  --color-foreground: #fafafa;
-  --color-primary: #8b5cf6;
-  --color-primary-foreground: #ffffff;
-  --color-accent: #06b6d4;
-  --color-accent-foreground: #ffffff;
-  --color-muted: #27272a;
-  --color-muted-foreground: #a1a1aa;
-  --color-border: #27272a;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
 }
 
 @layer base {
   :root {
+    --background: #ffffff;
+    --foreground: #09090b;
+    --primary: #7c3aed;
+    --primary-foreground: #ffffff;
+    --accent: #0891b2;
+    --accent-foreground: #ffffff;
+    --muted: #f4f4f5;
+    --muted-foreground: #71717a;
+    --border: #e4e4e7;
+  }
+
+  .dark {
     --background: #09090b;
     --foreground: #fafafa;
+    --primary: #8b5cf6;
+    --primary-foreground: #ffffff;
+    --accent: #06b6d4;
+    --accent-foreground: #ffffff;
+    --muted: #27272a;
+    --muted-foreground: #a1a1aa;
+    --border: #27272a;
   }
   
   body {
@@ -27,13 +46,19 @@
 
 @layer utilities {
   .glass-panel {
+    background: rgba(0, 0, 0, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .dark .glass-panel {
     background: rgba(255, 255, 255, 0.03);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
   }
   
   .text-gradient {
-    background: linear-gradient(to right, #8b5cf6, #06b6d4);
+    background: linear-gradient(to right, var(--primary), var(--accent));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
